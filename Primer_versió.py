@@ -97,3 +97,8 @@ with col2:
                 except Exception as e:
                     st.error(f"Error: {e}")
             st.markdown("</div>", unsafe_allow_html=True)
+    else:
+        st.info("Surtirà aquí un cop pugis la foto.")
+
+st.write("---")
+st.caption("Projecte Digitalització 2026")
