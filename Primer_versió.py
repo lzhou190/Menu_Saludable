@@ -100,5 +100,5 @@ with col2:
     else:
         st.info("Surtirà aquí un cop pugis la foto.")
 
-st.write("---")
+st.write("---") 
 st.caption("Projecte Digitalització 2026")
