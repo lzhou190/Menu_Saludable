@@ -87,3 +87,13 @@ with col2:
                     * **Al·lèrgens:** Ous i Lactosa.
                     * **Consell:** Molta proteïna, però vigila amb les salses!
                     """)
+            else:
+                try:
+                    genai.configure(api_key=api_key)
+                    model = genai.GenerativeModel('gemini-1.5-flash')
+                    prompt = "Analitza aquesta imatge. Si és menú, transcriu-lo. Si és plat, dona consells nutricionals. Respon en català."
+                    response = model.generate_content([prompt, image])
+                    st.write(response.text)
+                except Exception as e:
+                    st.error(f"Error: {e}")
+            st.markdown("</div>", unsafe_allow_html=True)
