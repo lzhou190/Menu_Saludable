@@ -79,3 +79,11 @@ with col2:
                     **🥗 Recomanació:**
                     Tria la **Crema + Llobarro** per un dinar equilibrat.
                     """)
+                else:
+                    st.success("✅ Plat detectat")
+                    st.markdown("""
+                    **🥗 Plat:** Amanida Cobb.
+                    * **Ingredients:** Pollastre, ou, alvocat, formatge.
+                    * **Al·lèrgens:** Ous i Lactosa.
+                    * **Consell:** Molta proteïna, però vigila amb les salses!
+                    """)
