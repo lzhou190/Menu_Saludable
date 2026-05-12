@@ -58,3 +58,24 @@ with col1:
         image = Image.open(uploaded_file)
         st.image(image, use_container_width=True)
         analitzar = st.button("🔍 ANALITZAR AMB IA")
+
+with col2:
+    st.markdown("<div class='info-header'>📊 Resultat de l'Anàlisi</div>", unsafe_allow_html=True)
+    
+    if uploaded_file and analitzar:
+        with st.spinner('Processant...'):
+            time.sleep(2)
+            st.markdown("<div class='result-card'>", unsafe_allow_html=True)
+            if demo_mode:
+                if tipus_demo == "Menú Complet":
+                    st.success("✅ Menú detectat")
+                    st.markdown("""
+                    **📋 Detall del Menú:**
+                    * **Primer plat:** Crema de carbassa o Amanida de tomàquet.
+                    * **Segon plat:** Llobarro al forn o Hamburguesa amb formatge.
+                    * **Postres:** Fruita o Iogurt natural.
+                    * **Beguda:** Aigua mineral.
+                    
+                    **🥗 Recomanació:**
+                    Tria la **Crema + Llobarro** per un dinar equilibrat.
+                    """)
